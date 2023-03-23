@@ -3,7 +3,7 @@
     "path": "~/Documents/Bookdown/tori_bookdown/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1261714769",
     "contents": "",
     "dirty": false,
     "created": 1679509854973.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "47,266",
-        "scrollLine": "36"
+        "cursorPosition": "23,0",
+        "scrollLine": "15"
     },
     "folds": "",
-    "lastKnownWriteTime": 1679511932,
+    "lastKnownWriteTime": 1679531770,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1679511932632,
+    "last_content_update": 1679531770266,
     "read_only": false,
     "read_only_alternatives": []
 }
