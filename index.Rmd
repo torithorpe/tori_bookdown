@@ -16,7 +16,7 @@ github-repo: rstudio/bookdown-demo
 ````{r eval = TRUE }
 library(knitr)
 
-knitr::include_graphics("/Users/tthorpe7/Documents/Vernal_Project/Photos")
+knitr::include_graphics("/Users/tthorpe7/Documents/Vernal_Project/Photos/DSC_1961.JPG")
 
 ````
 

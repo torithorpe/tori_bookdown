@@ -1,11 +1,71 @@
-# Hello bookdown 
+# Database structure
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+## Create empty SQLite Tables in R.
 
-## A section
+### Install DBI package {-}
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+````{r eval = TRUE, echo = FALSE }
+library(knitr)
 
-### An unnumbered section {-}
+knitr::include_graphics("/Users/tthorpe7/Desktop/db_structure_image.png")
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+````
+
+````{r}
+
+library(DBI)
+
+````
+
+### Connect to database {-}
+
+````{r}
+vernal_db <- dbConnect(RSQLite::SQLite(), "vernal_db.db")
+
+````
+
+### Create Tables {-}
+
+````{r eval = FALSE}
+dbExecute(vernal_db, "CREATE TABLE weather (
+      weather_id INTEGER PRIMARY KEY AUTOINCREMENT,
+      site varchar(60) NOT NULL,
+      date text NOT NULL,
+      arrival_time text,
+      type varchar(5) CHECK (type IN ('Point', 'Lek')) NOT NULL,
+      sunrise_time text,
+      temp INTEGER,
+      cloud_cover INTEGER,
+      precip char(1),
+      end_time text,
+      number_observers INTEGER,
+      notes varchar(300)
+);")
+
+dbExecute(vernal_db, "CREATE TABLE predator_surveys (
+          predator_id varchar(30) PRIMARY KEY,
+          weather_id INTEGER,
+          date text NOT NULL,
+          time text,
+          predation_attempt INTEGER,
+          distance_band varchar(12),
+          lek varchar(60) NOT NULL,
+          survey_type varchar(5) NOT NULL,
+          FOREIGN KEY (weather_id) REFERENCES weather(weather_id)
+);")
+
+dbExecute(vernal_db, "CREATE TABLE lek_counts (
+          count_id INTEGER PRIMARY KEY AUTOINCREMENT,
+          weather_id INTEGER,
+          lek varchar(60) NOT NULL,
+          date text NOT NULL,
+          time text NOT NULL,
+          male_count INTEGER,
+          female_count INTEGER,
+          unknown_count INTEGER,
+          predator_present varchar(20),
+          notes varchar(300),
+          FOREIGN KEY (weather_id) REFERENCES weather(weather_id)
+);")
+
+````
