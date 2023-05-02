@@ -1,12 +1,125 @@
-# Parts
+# Build a figure
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
+## I would like to work toward building a figure showing counts of the various rabbit species over time (dates). I may need to further manipulate the data so it is arranged in a way I can plot it.
 
-Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+library(ggridges)
+library(viridis)
+library(lubridate)
 
-Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
+```
 
-Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in an appendix are prepended with letters instead of numbers.
+## Pivot the data
+
+```{r}
+
+rab_long <- rabbits %>%
+            pivot_longer(cols = c("Cottontail.Count", "Jackrabbit.Count",
+                                            "Snowshoe.Hare.Count", "Unknown.Count"), 
+                                  names_to = "species", values_to = "count") %>%
+            view()
+
+```
+
+## Now we are ready to plot! Hopefully...
+
+```{r}
+
+ggplot(data = rab_long, aes(x = Date, y = count, color = species)) +
+  geom_point() +
+  geom_line()
+
+```
+
+I made a rough plot of the data, but I don't like how the zeros are plotted this way. I need to explore other options.
+
+## Trying something else.
+
+```{r}
+
+ggplot(data = rab_long, aes(x = Date, y = count, fill = species, height = count)) +
+geom_ridgeline()
+
+```
+
+This is really ugly! I have to keep trying.
+
+## Another one
+
+I think I should filter out the 0's in my data since they are implied.
+
+```{r}
+
+rab_long <- rab_long %>%
+             filter(count != 0) %>%
+             view()
+
+```
+
+This seems to have accomplished what I wanted!
+
+```{r}
+ggplot(data = rab_long, aes(x = Date, y = count, color = species, fill = species)) +
+  geom_point(shape = 21) +
+  ylim(0, 4) +
+  theme_bw()
+
+
+```
+
+I don't think this is the best way to display the data, so I am going to just show species total each month.
+
+```{r}
+
+rab_simple <- rab_long %>%
+dplyr::group_by(month(Date), species) %>%
+  tally()
+
+rab_simple <- rab_simple %>%
+  as.tibble() %>%
+  rename("mo" = "month(Date)")
+
+ggplot(data = rab_simple, aes(x = mo, y = n, fill = species)) +
+geom_bar(stat = "identity", position = "dodge") +
+  theme_bw() +
+  scale_x_continuous(breaks = unique(rab_simple$mo), minor_breaks = NULL,
+                     labels = c("March", "April")) +
+  labs(x = "Month", y = "Count", fill = "Species") +
+  ggtitle("2022 Rabbit Detections")  +
+  theme(axis.ticks.x = element_blank()) +
+  scale_fill_viridis_d(labels = c("Cottontails", "Jackrabbits", "Unknown species"))
+
+```
+ 
+I feel like this is finally pretty good, but I will try to make it even better.
+
+## Final Figure
+
+I am copying and pastying the previous code and adding to it.
+
+```{r}
+
+ggplot(data = rab_simple, aes(x = mo, y = n, fill = species)) +
+geom_bar(stat = "identity", position = position_dodge(width = 1)) +
+  theme_bw() +
+  scale_x_continuous(breaks = unique(rab_simple$mo), minor_breaks = NULL,
+                     labels = c("March", "April")) +
+  labs(x = "Month", y = "Count", fill = "Species") +
+  ggtitle("2022 Rabbit Detections")  +
+  theme(plot.title = element_text(hjust = 0.5, size = 20)) +
+  theme(axis.title.y = element_text(margin = margin(r = 12))) +
+  theme(axis.title.x = element_text(margin = margin(t = 10))) +
+  theme(axis.ticks.x = element_blank()) +
+  scale_fill_viridis_d(labels = c("Cottontails", "Jackrabbits", "Unknown species"))
+
+```
+
+## The Takeaway
+
+This took a lot of time, but it was great practice. I have learned so much and I am excited to apply my skills to my data. :)
 
 
 

@@ -23,7 +23,7 @@
 <meta name="author" content="Tori Thorpe" />
 
 
-<meta name="date" content="2023-03-24" />
+<meta name="date" content="2023-05-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="cross.html"/>
+<link rel="next" href="data-wrangling.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -119,28 +119,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -155,7 +133,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Tori's Final Project</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
@@ -168,30 +146,22 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="database-structure.html"><a href="database-structure.html#create-tables"><i class="fa fa-check"></i>Create Tables</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<li class="chapter" data-level="3" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>3</b> Data Wrangling</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+<li class="chapter" data-level="3.1" data-path="data-wrangling.html"><a href="data-wrangling.html#load-packages"><i class="fa fa-check"></i><b>3.1</b> Load Packages</a></li>
+<li class="chapter" data-level="3.2" data-path="data-wrangling.html"><a href="data-wrangling.html#load-csv"><i class="fa fa-check"></i><b>3.2</b> Load csv</a></li>
+<li class="chapter" data-level="3.3" data-path="data-wrangling.html"><a href="data-wrangling.html#check-csv-imported-properly"><i class="fa fa-check"></i><b>3.3</b> Check csv imported properly</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
-<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<li class="chapter" data-level="4" data-path="build-a-figure.html"><a href="build-a-figure.html"><i class="fa fa-check"></i><b>4</b> Build a figure</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
-<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+<li class="chapter" data-level="4.1" data-path="build-a-figure.html"><a href="build-a-figure.html#i-would-like-to-work-toward-building-a-figure-showing-counts-of-the-various-rabbit-species-over-time-dates.-i-may-need-to-further-manipulate-the-data-so-it-is-arranged-in-a-way-i-can-plot-it."><i class="fa fa-check"></i><b>4.1</b> I would like to work toward building a figure showing counts of the various rabbit species over time (dates). I may need to further manipulate the data so it is arranged in a way I can plot it.</a></li>
+<li class="chapter" data-level="4.2" data-path="build-a-figure.html"><a href="build-a-figure.html#pivot-the-data"><i class="fa fa-check"></i><b>4.2</b> Pivot the data</a></li>
+<li class="chapter" data-level="4.3" data-path="build-a-figure.html"><a href="build-a-figure.html#now-we-are-ready-to-plot-hopefully"><i class="fa fa-check"></i><b>4.3</b> Now we are ready to plot! Hopefully…</a></li>
+<li class="chapter" data-level="4.4" data-path="build-a-figure.html"><a href="build-a-figure.html#trying-something-else."><i class="fa fa-check"></i><b>4.4</b> Trying something else.</a></li>
+<li class="chapter" data-level="4.5" data-path="build-a-figure.html"><a href="build-a-figure.html#another-one"><i class="fa fa-check"></i><b>4.5</b> Another one</a></li>
+<li class="chapter" data-level="4.6" data-path="build-a-figure.html"><a href="build-a-figure.html#final-figure"><i class="fa fa-check"></i><b>4.6</b> Final Figure</a></li>
+<li class="chapter" data-level="4.7" data-path="build-a-figure.html"><a href="build-a-figure.html#the-takeaway"><i class="fa fa-check"></i><b>4.7</b> The Takeaway</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
-<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
-<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
-<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -219,54 +189,66 @@ div.csl-indent {
 <div id="install-dbi-package" class="section level3 unnumbered hasAnchor">
 <h3>Install DBI package<a href="database-structure.html#install-dbi-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="../../../Desktop/db_structure_image.png" width="518" /></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="database-structure.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="database-structure.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span>
+<span id="cb2-2"><a href="database-structure.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb2-3"><a href="database-structure.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
+## ✔ tibble  3.1.8      ✔ dplyr   1.0.10
+## ✔ tidyr   1.2.0      ✔ stringr 1.4.1 
+## ✔ readr   2.1.2      ✔ forcats 0.5.2 
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="database-structure.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DBI)</span>
+<span id="cb4-2"><a href="database-structure.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span></code></pre></div>
 </div>
 <div id="connect-to-database" class="section level3 unnumbered hasAnchor">
 <h3>Connect to database<a href="database-structure.html#connect-to-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="database-structure.html#cb3-1" aria-hidden="true" tabindex="-1"></a>vernal_db <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">&quot;vernal_db.db&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="database-structure.html#cb5-1" aria-hidden="true" tabindex="-1"></a>vernal_db <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">&quot;vernal_db.db&quot;</span>)</span></code></pre></div>
 </div>
 <div id="create-tables" class="section level3 unnumbered hasAnchor">
 <h3>Create Tables<a href="database-structure.html#create-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="database-structure.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(vernal_db, <span class="st">&quot;CREATE TABLE weather (</span></span>
-<span id="cb4-2"><a href="database-structure.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">      weather_id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
-<span id="cb4-3"><a href="database-structure.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="st">      site varchar(60) NOT NULL,</span></span>
-<span id="cb4-4"><a href="database-structure.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">      date text NOT NULL,</span></span>
-<span id="cb4-5"><a href="database-structure.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">      arrival_time text,</span></span>
-<span id="cb4-6"><a href="database-structure.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">      type varchar(5) CHECK (type IN (&#39;Point&#39;, &#39;Lek&#39;)) NOT NULL,</span></span>
-<span id="cb4-7"><a href="database-structure.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">      sunrise_time text,</span></span>
-<span id="cb4-8"><a href="database-structure.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">      temp INTEGER,</span></span>
-<span id="cb4-9"><a href="database-structure.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">      cloud_cover INTEGER,</span></span>
-<span id="cb4-10"><a href="database-structure.html#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">      precip char(1),</span></span>
-<span id="cb4-11"><a href="database-structure.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">      end_time text,</span></span>
-<span id="cb4-12"><a href="database-structure.html#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="st">      number_observers INTEGER,</span></span>
-<span id="cb4-13"><a href="database-structure.html#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="st">      notes varchar(300)</span></span>
-<span id="cb4-14"><a href="database-structure.html#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="st">);&quot;</span>)</span>
-<span id="cb4-15"><a href="database-structure.html#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="database-structure.html#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(vernal_db, <span class="st">&quot;CREATE TABLE predator_surveys (</span></span>
-<span id="cb4-17"><a href="database-structure.html#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="st">          predator_id varchar(30) PRIMARY KEY,</span></span>
-<span id="cb4-18"><a href="database-structure.html#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="st">          weather_id INTEGER,</span></span>
-<span id="cb4-19"><a href="database-structure.html#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="st">          date text NOT NULL,</span></span>
-<span id="cb4-20"><a href="database-structure.html#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="st">          time text,</span></span>
-<span id="cb4-21"><a href="database-structure.html#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="st">          predation_attempt INTEGER,</span></span>
-<span id="cb4-22"><a href="database-structure.html#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="st">          distance_band varchar(12),</span></span>
-<span id="cb4-23"><a href="database-structure.html#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="st">          lek varchar(60) NOT NULL,</span></span>
-<span id="cb4-24"><a href="database-structure.html#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="st">          survey_type varchar(5) NOT NULL,</span></span>
-<span id="cb4-25"><a href="database-structure.html#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="st">          FOREIGN KEY (weather_id) REFERENCES weather(weather_id)</span></span>
-<span id="cb4-26"><a href="database-structure.html#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="st">);&quot;</span>)</span>
-<span id="cb4-27"><a href="database-structure.html#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-28"><a href="database-structure.html#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(vernal_db, <span class="st">&quot;CREATE TABLE lek_counts (</span></span>
-<span id="cb4-29"><a href="database-structure.html#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="st">          count_id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
-<span id="cb4-30"><a href="database-structure.html#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="st">          weather_id INTEGER,</span></span>
-<span id="cb4-31"><a href="database-structure.html#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="st">          lek varchar(60) NOT NULL,</span></span>
-<span id="cb4-32"><a href="database-structure.html#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="st">          date text NOT NULL,</span></span>
-<span id="cb4-33"><a href="database-structure.html#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="st">          time text NOT NULL,</span></span>
-<span id="cb4-34"><a href="database-structure.html#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="st">          male_count INTEGER,</span></span>
-<span id="cb4-35"><a href="database-structure.html#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="st">          female_count INTEGER,</span></span>
-<span id="cb4-36"><a href="database-structure.html#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="st">          unknown_count INTEGER,</span></span>
-<span id="cb4-37"><a href="database-structure.html#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="st">          predator_present varchar(20),</span></span>
-<span id="cb4-38"><a href="database-structure.html#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="st">          notes varchar(300),</span></span>
-<span id="cb4-39"><a href="database-structure.html#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="st">          FOREIGN KEY (weather_id) REFERENCES weather(weather_id)</span></span>
-<span id="cb4-40"><a href="database-structure.html#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="st">);&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="database-structure.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(vernal_db, <span class="st">&quot;CREATE TABLE weather (</span></span>
+<span id="cb6-2"><a href="database-structure.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">      weather_id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
+<span id="cb6-3"><a href="database-structure.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">      site varchar(60) NOT NULL,</span></span>
+<span id="cb6-4"><a href="database-structure.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">      date text NOT NULL,</span></span>
+<span id="cb6-5"><a href="database-structure.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">      arrival_time text,</span></span>
+<span id="cb6-6"><a href="database-structure.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">      type varchar(5) CHECK (type IN (&#39;Point&#39;, &#39;Lek&#39;)) NOT NULL,</span></span>
+<span id="cb6-7"><a href="database-structure.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">      sunrise_time text,</span></span>
+<span id="cb6-8"><a href="database-structure.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">      temp INTEGER,</span></span>
+<span id="cb6-9"><a href="database-structure.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">      cloud_cover INTEGER,</span></span>
+<span id="cb6-10"><a href="database-structure.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">      precip char(1),</span></span>
+<span id="cb6-11"><a href="database-structure.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">      end_time text,</span></span>
+<span id="cb6-12"><a href="database-structure.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="st">      number_observers INTEGER,</span></span>
+<span id="cb6-13"><a href="database-structure.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="st">      notes varchar(300)</span></span>
+<span id="cb6-14"><a href="database-structure.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">);&quot;</span>)</span>
+<span id="cb6-15"><a href="database-structure.html#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="database-structure.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(vernal_db, <span class="st">&quot;CREATE TABLE predator_surveys (</span></span>
+<span id="cb6-17"><a href="database-structure.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="st">          predator_id varchar(30) PRIMARY KEY,</span></span>
+<span id="cb6-18"><a href="database-structure.html#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="st">          weather_id INTEGER,</span></span>
+<span id="cb6-19"><a href="database-structure.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="st">          date text NOT NULL,</span></span>
+<span id="cb6-20"><a href="database-structure.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="st">          time text,</span></span>
+<span id="cb6-21"><a href="database-structure.html#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="st">          predation_attempt INTEGER,</span></span>
+<span id="cb6-22"><a href="database-structure.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="st">          distance_band varchar(12),</span></span>
+<span id="cb6-23"><a href="database-structure.html#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="st">          lek varchar(60) NOT NULL,</span></span>
+<span id="cb6-24"><a href="database-structure.html#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="st">          survey_type varchar(5) NOT NULL,</span></span>
+<span id="cb6-25"><a href="database-structure.html#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="st">          FOREIGN KEY (weather_id) REFERENCES weather(weather_id)</span></span>
+<span id="cb6-26"><a href="database-structure.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="st">);&quot;</span>)</span>
+<span id="cb6-27"><a href="database-structure.html#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="database-structure.html#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="fu">dbExecute</span>(vernal_db, <span class="st">&quot;CREATE TABLE lek_counts (</span></span>
+<span id="cb6-29"><a href="database-structure.html#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="st">          count_id INTEGER PRIMARY KEY AUTOINCREMENT,</span></span>
+<span id="cb6-30"><a href="database-structure.html#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="st">          weather_id INTEGER,</span></span>
+<span id="cb6-31"><a href="database-structure.html#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="st">          lek varchar(60) NOT NULL,</span></span>
+<span id="cb6-32"><a href="database-structure.html#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="st">          date text NOT NULL,</span></span>
+<span id="cb6-33"><a href="database-structure.html#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="st">          time text NOT NULL,</span></span>
+<span id="cb6-34"><a href="database-structure.html#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="st">          male_count INTEGER,</span></span>
+<span id="cb6-35"><a href="database-structure.html#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="st">          female_count INTEGER,</span></span>
+<span id="cb6-36"><a href="database-structure.html#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="st">          unknown_count INTEGER,</span></span>
+<span id="cb6-37"><a href="database-structure.html#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="st">          predator_present varchar(20),</span></span>
+<span id="cb6-38"><a href="database-structure.html#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="st">          notes varchar(300),</span></span>
+<span id="cb6-39"><a href="database-structure.html#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="st">          FOREIGN KEY (weather_id) REFERENCES weather(weather_id)</span></span>
+<span id="cb6-40"><a href="database-structure.html#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="st">);&quot;</span>)</span></code></pre></div>
 
 </div>
 </div>
@@ -277,7 +259,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="cross.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-wrangling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -331,20 +313,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
